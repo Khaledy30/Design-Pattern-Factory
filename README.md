@@ -16,21 +16,22 @@ O Padrão Factory é uma forma mais organizada de criar objetos no seu código. 
 
 ```plaintext
 project-design-pattern-factory/
-├── src/
-│   ├── interfaces/        # Contratos para nossos objetos
+├── src/                  
+│   ├── interfaces/      # Define a interface base para todos os veículos
 │   │   └── Vehicle.ts
-│   ├── models/           # Implementações concretas
+│   ├── models/          # Contém as implementações concretas dos veículos
 │   │   ├── Car.ts
 │   │   └── Motorcycle.ts
-│   ├── factories/        # Implementações da Factory
+│   ├── factories/       # Responsável pela criação dos objetos
 │   │   └── VehicleFactory.ts
 │   └── index.ts         # Ponto de entrada da aplicação
-├── tests/
-│   ├── models/          # Testes para os modelos
-│   │   ├── Car.test.ts
-│   │   └── Motorcycle.test.ts
-│   └── factories/       # Testes para as factories
-│       └── VehicleFactory.test.ts
+│
+├── tests/              
+    ├── models/         # Testes das implementações dos veículos
+    │   ├── Car.test.ts
+    │   └── Motorcycle.test.ts
+    └── factories/      # Testes da lógica de criação
+        └── VehicleFactory.test.ts
 ```
 
 ## Testes Unitários
